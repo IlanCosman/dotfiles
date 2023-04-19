@@ -1,5 +1,11 @@
 # dotfiles
 
+## Installation
+
+```fish
+curl -sL https://raw.githubusercontent.com/ilancosman/dotfiles/main/install.fish | source
+```
+
 ## Gnome Config
 
 ### Extensions

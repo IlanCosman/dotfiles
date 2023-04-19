@@ -1,9 +1,4 @@
 function dotfiles_install --on-event dotfiles_events_install
-    # Install fisher if necessary
-    type --query fisher ||
-        curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish |
-            source && fisher install jorgebucaran/fisher
-
     # fish_add_path /opt/homebrew/bin/ if it exists
     if test -e /opt/homebrew/bin/
         fish_add_path /opt/homebrew/bin/
