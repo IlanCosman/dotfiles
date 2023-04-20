@@ -1,8 +1,6 @@
 function dotfiles_install --on-event dotfiles_events_install
-    # fish_add_path /opt/homebrew/bin/ if it exists
-    if test -e /opt/homebrew/bin/
-        fish_add_path /opt/homebrew/bin/
-    end
+    # Add these to the path if they exist
+    fish_add_path /opt/homebrew/bin/ ~/.cargo/bin/
 
     # Install dependencies if necessary
     set -l install_list
