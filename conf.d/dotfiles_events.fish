@@ -3,8 +3,14 @@ function dotfiles_install --on-event dotfiles_events_install
     fish_add_path /opt/homebrew/bin/ ~/.cargo/bin/
 
     # Install dependencies if necessary
+    set -l dependencies \
+        bat \
+        fd \
+        fzf \
+        lsd \
+        thefuck
+
     set -l install_list
-    set -l dependencies bat fd fzf lsd
     for dependency in $dependencies
         type --query $dependency || set -a install_list $dependency
     end
@@ -25,4 +31,8 @@ function dotfiles_install --on-event dotfiles_events_install
         jorgebucaran/autopair.fish \
         patrickf1/fzf.fish \
         ilancosman/tide@v5
+
+    # Load in thefuck
+    thefuck --alias | source
+    funcsave fuck
 end
