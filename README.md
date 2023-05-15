@@ -10,10 +10,10 @@ curl -sL https://raw.githubusercontent.com/ilancosman/dotfiles/main/install.fish
 
 ### Extensions
 
-#### [remove-alt-tab-delay](https://github.com/bdaase/remove-alt-tab-delay):
+#### [remove-alt-tab-delay](https://github.com/IlanCosman/remove-alt-tab-delay):
 
 ```fish
-git clone https://github.com/bdaase/remove-alt-tab-delay ~/.local/share/gnome-shell/extensions/remove-alt-tab-delay@daase.net
+git clone https://github.com/IlanCosman/remove-alt-tab-delay ~/.local/share/gnome-shell/extensions/remove-alt-tab-delay@IlanCosman.net
 ```
 
 Log out and log back in.
