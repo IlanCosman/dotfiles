@@ -8,7 +8,9 @@ function dotfiles_install --on-event dotfiles_events_install
         fd \
         fzf \
         lsd \
-        thefuck
+        thefuck \
+        tealdeer \
+        hyperfine
 
     set -l install_list
     for dependency in $dependencies
