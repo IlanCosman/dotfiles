@@ -14,7 +14,12 @@ function dotfiles_install --on-event dotfiles_events_install
 
     set -l install_list
     for dependency in $dependencies
-        type --query $dependency || set -a install_list $dependency
+        set -l cli_names $dependency
+        switch $dependency
+            case tealdeer
+                set cli_names tldr
+        end
+        type --query $cli_names || set -a install_list $dependency
     end
 
     if test -n "$install_list"
